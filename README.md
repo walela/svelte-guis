@@ -11,5 +11,5 @@ Modified [https://eugenkiss.github.io/7guis/tasks](7 GUIs) Svelte Challenge
 - [ ] Calculator
 - [ ] CRUD
 - [ ] Circle Drawer
-- [ ] Spreadsheet
+- [ ] Spreadsheet (h/t https://surma.dev/things/spreadsheet/index.html)
 - [ ] [Chrome Extension](https://www.bekk.christmas/post/2020/12/creating-a-chrome-extension-with-react-and-typescript)
