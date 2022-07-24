@@ -1,6 +1,6 @@
 # Svelte GUIs
 
-Modified [https://eugenkiss.github.io/7guis/tasks](7 GUIs) Svelte Challenge
+Modified [7 GUIs](https://eugenkiss.github.io/7guis/tasks) Svelte Challenge
 
 - [x] Counter
 - [ ] Todo App
