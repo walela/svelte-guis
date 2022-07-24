@@ -2,7 +2,7 @@
 
 Modified [https://eugenkiss.github.io/7guis/tasks](7 GUIs) Svelte Challenge
 
-- [ ] Counter
+- [x] Counter
 - [ ] Todo App
 - [ ] Tic Tac Toe (https://playtictactoe.org/)
 - [ ] Temperature Converter
