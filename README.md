@@ -3,7 +3,7 @@
 Modified [7 GUIs](https://eugenkiss.github.io/7guis/tasks) Svelte Challenge
 
 - [x] Counter
-- [ ] Todo App
+- [x] Todo App
 - [ ] Tic Tac Toe (https://playtictactoe.org/)
 - [ ] Temperature Converter
 - [ ] Flight Booker
