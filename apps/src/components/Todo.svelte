@@ -22,10 +22,11 @@
 </script>
 
 <Layout title="To Do" width={96}>
-  <div class="flex gap-2 mb-2">
+  <div class="flex gap-2 mb-1">
     <input
       type="text"
-      class="border px-2 py-2 w-48 rounded focus:border-violet-500"
+
+      class={`${error && 'border-2 border-red-400'} border px-2 py-2 w-48 rounded focus:border-indigo-500`}
       bind:value={todo.text} />
     <button
       on:click={addTask}
@@ -33,7 +34,7 @@
       >Add Todo</button>
   </div>
   <span class="text-red-400 mb-2">{error}</span>
-  <ol>
+  <ol class="mt-2">
     {#each todos as todo}
       <li
         on:click={() => (todo.completed = !todo.completed)}
