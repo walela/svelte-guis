@@ -6,8 +6,20 @@ export const todo: Writable<Todo> = writable({ text: "", completed: false });
 export const todos: Writable<Todo[]> = writable([
   { text: "Learn Svelte", completed: false },
 ]);
-
 const formState = writable({ status: "idle" });
+export const count = derived(todos, todos => {
+  return todos.filter(todo => !todo.completed).length;
+});
+export const error = derived([todo, formState], ([$todo, $formState]) => {
+  if ($formState.status === "submitted") {
+    if (!$todo.text.trim()) {
+      return "Please enter a task";
+    } else if ($todo.text.length < 3) {
+      return "Todo must be at least 3 characters long";
+    }
+    return "";
+  }
+});
 
 export const addTodo = () => {
   formState.set({ status: "submitted" });
@@ -22,18 +34,3 @@ export const addTodo = () => {
     formState.set({ status: "idle" });
   }
 };
-
-export const count = derived(todos, todos => {
-  return todos.filter(todo => !todo.completed).length;
-});
-
-export const error = derived([todo, formState], $values => {
-  if ($values[1].status === "submitted") {
-    if (!$values[0].text.trim()) {
-      return "Please enter a task";
-    } else if ($values[0].text.length < 3) {
-      return "Todo must be at least 3 characters long";
-    }
-    return "";
-  }
-});
