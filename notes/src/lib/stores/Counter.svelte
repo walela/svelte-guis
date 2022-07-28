@@ -1,0 +1,13 @@
+<script>
+  import { count } from "./stores";
+  import Incrementer from "./Incrementer.svelte";
+  import Decrementer from "./Decrementer.svelte";
+  import Resetter from "./Resetter.svelte";
+  let countValue = 0;
+
+  count.subscribe((value) => {
+    countValue = value;
+  });
+</script>
+
+<h1>The count is {countValue}</h1>
