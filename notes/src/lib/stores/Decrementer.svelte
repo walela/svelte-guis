@@ -2,7 +2,7 @@
   import { count } from "./stores";
 
   function decrement() {
-    // TODO reset the count
+    count.update((value) => value - 1);
   }
 </script>
 

@@ -2,7 +2,7 @@
   import { count } from "./stores";
 
   function increment() {
-    // TODO reset the count
+    count.update((value) => value + 1);
   }
 </script>
 
