@@ -25,8 +25,9 @@
   <div class="flex gap-2 mb-1">
     <input
       type="text"
-
-      class={`${error && 'border-2 border-red-400'} border px-2 py-2 w-48 rounded focus:border-indigo-500`}
+      class={`${
+        error && "border-2 border-red-400"
+      } border px-2 py-2 w-48 rounded focus:border-indigo-500`}
       bind:value={todo.text} />
     <button
       on:click={addTask}
